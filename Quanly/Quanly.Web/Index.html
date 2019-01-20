@@ -1,0 +1,43 @@
+﻿<html>
+<head>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <!--<link href="Content/bootstrap.css" rel="stylesheet" />-->
+    <style>
+        .navbar {
+            border-radius: 0;
+            padding-left: 1em;
+        }
+    </style>
+
+
+    <!-- JS (load angular, ui-router, and our custom js file) -->
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/AngularUI/ui-router.min.js"></script>
+    <script src="Scripts/app.js"></script>
+    <script src="View/Order/OrderController.js"></script>
+    <script src="View/Customer/CustomerController.js"></script>
+    <script src="View/Product/ProductController.js"></script>
+    <style>
+        .active {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body ng-app="app">
+    <div class=" navbar navbar-inverse">
+        <ul class="nav navbar-nav">
+            <li><a ui-sref="home" ui-sref-active="active">Home</a></li>
+            <li><a ui-sref="product" ui-sref-active="active">Product</a></li>
+            <li><a ui-sref="customer" ui-sref-active="active">Customer</a></li>
+            <li><a ui-sref="order" ui-sref-active="active">List Order</a></li>
+        </ul>
+
+    </div>
+    <div class="ui-view">
+
+    </div>
+
+</body>
+</html>
