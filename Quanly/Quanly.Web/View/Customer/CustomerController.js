@@ -18,9 +18,7 @@
 
     $scope.Edit = function (item) {
         $scope.id = item.Id;
-        $scope.quantity = item.Quantity;
-        $scope.price = item.Price;
-        $scope.name = item.name;
+        $scope.name = item.Name;
         $scope.myId = true;
         $scope.listcustomer = false;
         $scope.createcustomer = false;

@@ -16,9 +16,9 @@
     getData();
     $scope.Edit = function (item) {
         $scope.id = item.Id;
-        $scope.quantity = item.Quantity;
-        $scope.price = item.Price;
-        $scope.name = item.name;
+        $scope.customerid = item.CustomerID;
+        $scope.productid = item.ProductID;
+        $scope.quantity = item.QuantityOrder;
         $scope.myId = true;
         $scope.listorder = false;
         $scope.createorder = false;
