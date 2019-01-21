@@ -1,7 +1,7 @@
 ﻿var myApp = angular.module('app', ['ui.router']);
 
-myApp.config(function ($stateProvider) {
-
+myApp.config(function ($stateProvider,$urlRouterProvider) {
+    //$urlMatcherFactoryProvider.caseInsensitive(true);
     var helloState = {
         name: 'home',
         url: '/home',
@@ -11,21 +11,24 @@ myApp.config(function ($stateProvider) {
     var productState = {
         name: 'product',
         url: '/product',
-        templateUrl: 'View/Product/product.html'
+        templateUrl: 'View/Product/product.html',
+        controller: 'productController'
     }
     
     var customerState = {
         name: 'customer',
         url: '/customer',
-        templateUrl: 'View/Customer/customer.html'
+        templateUrl: 'View/Customer/customer.html',
+        controller: 'customerController'
 
     }
     var orderState = {
         name: 'order',
         url: '/order',
-        templateUrl: 'View/Order/order.html'
+        templateUrl: 'View/Order/order.html',
+        controller: 'orderController'
     }
-
+    $urlRouterProvider.otherwise("/home");
     $stateProvider.state(helloState);
     $stateProvider.state(productState);
     $stateProvider.state(customerState);
