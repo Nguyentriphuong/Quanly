@@ -13,7 +13,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Quanly.Data</RootNamespace>
     <AssemblyName>Quanly.Data</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
@@ -23,6 +23,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -50,6 +51,7 @@
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
@@ -58,16 +60,14 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
@@ -75,53 +75,58 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="QuanLy.Context.tt">
+    <Content Include="Quanly.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>QuanLy.Context.cs</LastGenOutput>
-      <DependentUpon>QuanLy.edmx</DependentUpon>
+      <DependentUpon>Quanly.edmx</DependentUpon>
+      <LastGenOutput>Quanly.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="QuanLy.tt">
+    <Content Include="Quanly.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QuanLy.edmx</DependentUpon>
-      <LastGenOutput>QuanLy.cs</LastGenOutput>
+      <DependentUpon>Quanly.edmx</DependentUpon>
+      <LastGenOutput>Quanly.cs</LastGenOutput>
     </Content>
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Customer.cs">
-      <DependentUpon>QuanLy.tt</DependentUpon>
+      <DependentUpon>Quanly.tt</DependentUpon>
     </Compile>
     <Compile Include="Order.cs">
-      <DependentUpon>QuanLy.tt</DependentUpon>
+      <DependentUpon>Quanly.tt</DependentUpon>
     </Compile>
     <Compile Include="Product.cs">
-      <DependentUpon>QuanLy.tt</DependentUpon>
+      <DependentUpon>Quanly.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuanLy.Context.cs">
+    <Compile Include="Quanly.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLy.Context.tt</DependentUpon>
+      <DependentUpon>Quanly.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="QuanLy.cs">
+    <Compile Include="Quanly.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLy.tt</DependentUpon>
+      <DependentUpon>Quanly.tt</DependentUpon>
     </Compile>
-    <Compile Include="QuanLy.Designer.cs">
+    <Compile Include="Quanly.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLy.edmx</DependentUpon>
+      <DependentUpon>Quanly.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>Quanly.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <EntityDeploy Include="QuanLy.edmx">
+    <EntityDeploy Include="Quanly.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>QuanLy.Designer.cs</LastGenOutput>
+      <LastGenOutput>Quanly.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="QuanLy.edmx.diagram">
-      <DependentUpon>QuanLy.edmx</DependentUpon>
+    <Content Include="Quanly.edmx.diagram">
+      <DependentUpon>Quanly.edmx</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
