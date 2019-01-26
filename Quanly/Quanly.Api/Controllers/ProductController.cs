@@ -10,6 +10,7 @@ using System.Web.Http;
 
 namespace Quanly.Api.Controllers
 {
+    [Authorize]
     public class ProductController : ApiController
     {
         private ProductService productService = new ProductService();
