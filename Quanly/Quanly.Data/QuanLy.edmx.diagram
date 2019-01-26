@@ -11,9 +11,9 @@
         <EntityTypeShape EntityType="QuanlyModel.Product" Width="1.5" PointX="5" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanlyModel.User" Width="1.5" PointX="0.75" PointY="3.75" />
 =======
-        <EntityTypeShape EntityType="QuanlyModel.Product" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanlyModel.User" Width="1.5" PointX="3.375" PointY="3.75" />
->>>>>>> da508482c0f46cf26736c5c44a6c3b00a55e3fe7
+        
+        
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; da508482c0f46cf26736c5c44a6c3b00a55e3fe7
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
