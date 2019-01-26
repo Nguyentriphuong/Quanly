@@ -1,4 +1,5 @@
 ﻿using Quanly.Data;
+using Quanly.Service.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace Quanly.Service.Service
 {
     interface IProductService
     {
-        List<Product> GetProducts();
+        List<Product_Order> GetProducts();
         Product GetProduct(int id);
         bool SaveProduct(Product product);
         bool UpdateProduct(Product product, int id);

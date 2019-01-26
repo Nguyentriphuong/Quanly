@@ -9,6 +9,13 @@
             border-radius: 0;
             padding-left: 1em;
         }
+        ul.nav.navbar-nav {
+            display: -webkit-inline-box;
+            /* margin: 1em; */
+        }
+        li {
+            padding: 10px;
+        }
     </style>
 
 
@@ -28,7 +35,7 @@
 </head>
 
 <body ng-app="app">
-    <div class=" navbar navbar-inverse">
+    <div class="navbar navbar-light" style="background-color: #3a1f1f;">
         <ul class="nav navbar-nav">
             <li><a ui-sref="home" ui-sref-active="active">Home</a></li>
             <li><a ui-sref="product" ui-sref-active="active">Product</a></li>

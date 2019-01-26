@@ -1,4 +1,5 @@
 ﻿using Quanly.Data;
+using Quanly.Service.DTO;
 using Quanly.Service.Service;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,7 @@ namespace Quanly.Api.Controllers
     {
         private ProductService productService = new ProductService();
         [ActionName("GetProduct")]
-        public IEnumerable<Product> GetProducts()
+        public IEnumerable<Product_Order> GetProducts()
         {
             return productService.GetProducts();
         }
