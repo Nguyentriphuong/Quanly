@@ -130,10 +130,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/13/2012 12:19:34</publishTime>
     </File>
     <File Include="bin/Quanly.Api.dll">
-      <publishTime>01/27/2019 11:46:16</publishTime>
+      <publishTime>01/27/2019 22:33:02</publishTime>
     </File>
     <File Include="bin/Quanly.Api.pdb">
-      <publishTime>01/27/2019 11:46:16</publishTime>
+      <publishTime>01/27/2019 22:33:02</publishTime>
     </File>
     <File Include="bin/Quanly.Data.dll">
       <publishTime>01/27/2019 11:30:15</publishTime>

@@ -23,15 +23,6 @@ namespace Quanly.Api.Provider
             //context.Validated(new ClaimsIdentity(context.Options.AuthenticationType));
             context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
 
-            //using (AuthRepository _repo = new AuthRepository())
-            //{
-            //    IdentityUser user = await _repo.FindUser(context.UserName, context.Password);
-            //    if (user == null)
-            //    {
-            //        context.SetError("invalid_grant", "The user name or password is incorrect.");
-            //        return;
-            //    }
-            //}
             
             
             var user = us.GetUser(context.UserName, context.Password);
@@ -42,19 +33,6 @@ namespace Quanly.Api.Provider
 
                 return;
             }
-
-            //using(UserService repo = new UserService())
-           // {
-                //var user = us.GetUser(context.UserName, context.Password);
-                //if(user == null)
-                //{
-
-                //    context.SetError("invalid_grant", "The user name or password is incorrect.");
-                    
-                //    return;
-                //}
-           // }
-            
             var identity = new ClaimsIdentity(context.Options.AuthenticationType);
             identity.AddClaim(new Claim("sub", context.UserName));
             identity.AddClaim(new Claim("role", "user"));
