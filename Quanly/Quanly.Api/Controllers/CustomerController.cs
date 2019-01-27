@@ -9,7 +9,7 @@ using System.Web.Http;
 
 namespace Quanly.Api.Controllers
 {
-   // [Authorize]
+    [Authorize]
     public class CustomerController : ApiController
     {
         private CustomerService customerService = new CustomerService();

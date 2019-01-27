@@ -9,12 +9,13 @@ using System.Web.Http;
 
 namespace Quanly.Api.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class OrderController : ApiController
     {
         private OrderService orderService = new OrderService();
+        //[Authorize]
         [ActionName("GetOrder")]
-        public IEnumerable<Order> GetProducts()
+        public IEnumerable<Order> GetOrders()
         {
             return orderService.GetOrders();
         }
