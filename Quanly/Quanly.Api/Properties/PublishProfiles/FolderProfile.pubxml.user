@@ -130,10 +130,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/27/2019 15:56:54</publishTime>
     </File>
     <File Include="bin/Quanly.Api.dll">
-      <publishTime>01/28/2019 09:05:59</publishTime>
+      <publishTime>01/28/2019 15:17:15</publishTime>
     </File>
     <File Include="bin/Quanly.Api.pdb">
-      <publishTime>01/28/2019 09:05:59</publishTime>
+      <publishTime>01/28/2019 15:17:15</publishTime>
     </File>
     <File Include="bin/Quanly.Data.dll">
       <publishTime>01/28/2019 08:56:25</publishTime>
@@ -145,13 +145,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/28/2019 08:56:25</publishTime>
     </File>
     <File Include="bin/Quanly.Service.dll">
-      <publishTime>01/28/2019 09:05:56</publishTime>
+      <publishTime>01/28/2019 13:13:09</publishTime>
     </File>
     <File Include="bin/Quanly.Service.dll.config">
       <publishTime>01/27/2019 15:56:54</publishTime>
     </File>
     <File Include="bin/Quanly.Service.pdb">
-      <publishTime>01/28/2019 09:05:56</publishTime>
+      <publishTime>01/28/2019 13:13:09</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>01/27/2019 15:56:54</publishTime>
