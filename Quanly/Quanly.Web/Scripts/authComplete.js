@@ -1,5 +1,4 @@
-﻿
-window.common = (function () {
+﻿window.common = (function () {
     var common = {};
 
     common.getFragment = function getFragment() {
@@ -51,4 +50,3 @@ window.location.hash = fragment.state || '';
 window.opener.$windowScope.authCompletedCB(fragment);
 
 window.close();
-
