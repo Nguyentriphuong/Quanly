@@ -21,10 +21,10 @@ namespace Quanly.Api.Provider
         public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
         {
             //context.Validated(new ClaimsIdentity(context.Options.AuthenticationType));
-            //context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
+            context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
 
-            
-            
+
+
             var user = us.GetUser(context.UserName, context.Password);
             if (user == null)
             {
