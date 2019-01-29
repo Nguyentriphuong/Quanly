@@ -14,8 +14,8 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     var orderState = {
         name: 'orders',
         url: '/orders',
-        controller: "ordersController",
-        templateUrl: "/app/views/orders.html"
+        templateUrl: "/app/views/orders.html",
+        controller: "ordersController"
     }
     var loginState = {
         name: 'login',

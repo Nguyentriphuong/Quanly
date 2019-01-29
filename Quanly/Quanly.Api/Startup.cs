@@ -11,7 +11,7 @@ using Quanly;
 using Quanly.Api.Provider;
 using System.Configuration;
 using Microsoft.Owin.Security.DataHandler.Encoder;
-using Microsoft.Owin.Security.Jwt;
+//using Microsoft.Owin.Security.Jwt;
 using System.Web.Configuration;
 using System.Threading.Tasks;
 

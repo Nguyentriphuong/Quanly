@@ -51,6 +51,7 @@ app.factory('authService', ['$http', '$q', 'localStorageService', function ($htt
         if (authData) {
             _authentication.isAuth = true;
             _authentication.userName = authData.userName;
+            _authentication.token = authData.token;
         }
 
     }
