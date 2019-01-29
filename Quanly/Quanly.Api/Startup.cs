@@ -18,39 +18,12 @@ using System.Threading.Tasks;
 [assembly: OwinStartup(typeof(Quanly.Api.Startup))]
 namespace Quanly.Api
 {
-    //public class Startup
-    //{
-    //    public void Configuration(IAppBuilder app)
-    //    {
-    //        HttpConfiguration config = new HttpConfiguration();
-    //        WebApiConfig.Register(config);
-    //        app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
-    //        //app.UseWebApi(config);
-
-    //        ConfigureOAuth(app);
-    //    }
-    //    public void ConfigureOAuth(IAppBuilder app)
-    //    {
-    //        OAuthAuthorizationServerOptions OAuthServerOptions = new OAuthAuthorizationServerOptions()
-    //        {
-    //            AllowInsecureHttp = true,
-    //            TokenEndpointPath = new PathString("/token"),
-    //            AccessTokenExpireTimeSpan = TimeSpan.FromDays(1),
-    //            Provider = new SimpleAuthorizationServerProvider()
-    //        };
-
-    //        // Token Generation
-    //        app.UseOAuthAuthorizationServer(OAuthServerOptions);
-    //        app.UseOAuthBearerAuthentication(new OAuthBearerAuthenticationOptions());
-
-    //    }
-    //}
     public class Startup
     {
         public static OAuthBearerAuthenticationOptions OAuthBearerOptions { get; private set; }
 
         //string URL_AS_API = ConfigurationManager.AppSettings["URL_AS_API"];
-        string ClientId = ConfigurationManager.AppSettings["ClientId"];
+        //string ClientId = ConfigurationManager.AppSettings["ClientId"];
         public void Configuration(IAppBuilder app)
         {
             HttpConfiguration config = new HttpConfiguration();

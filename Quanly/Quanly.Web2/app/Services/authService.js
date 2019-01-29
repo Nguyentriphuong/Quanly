@@ -6,7 +6,8 @@ app.factory('authService', ['$http', '$q', 'localStorageService', function ($htt
 
     var _authentication = {
         isAuth: false,
-        userName: ""
+        userName: "",
+        token: ""
     };
 
 
@@ -15,14 +16,14 @@ app.factory('authService', ['$http', '$q', 'localStorageService', function ($htt
         var data = "grant_type=password&username=" + loginData.userName + "&password=" + loginData.password;
 
         var deferred = $q.defer();
-
+        
         $http.post(serviceBase + 'token', data, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }).then(function (response) {
-            debugger
-            localStorageService.set('authorizationData', { token: response.access_token, userName: loginData.userName });
+            
+            localStorageService.set('authorizationData', { token: response.data.access_token, userName: loginData.userName });
 
             _authentication.isAuth = true;
             _authentication.userName = loginData.userName;
-
+            _authentication.token = response.data.access_token;
             deferred.resolve(response);
 
         }, function (response) {
@@ -37,8 +38,8 @@ app.factory('authService', ['$http', '$q', 'localStorageService', function ($htt
 
     var _logOut = function () {
 
-        localStorageService.remove('authorizationData');
-
+        //localStorageService.remove('authorizationData');
+        _authentication.token = "";
         _authentication.isAuth = false;
         _authentication.userName = "";
 

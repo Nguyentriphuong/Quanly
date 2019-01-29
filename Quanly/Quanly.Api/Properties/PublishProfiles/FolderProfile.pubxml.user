@@ -151,28 +151,28 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/27/2019 15:56:54</publishTime>
     </File>
     <File Include="bin/Quanly.Api.dll">
-      <publishTime>01/29/2019 14:55:58</publishTime>
+      <publishTime>01/29/2019 16:38:29</publishTime>
     </File>
     <File Include="bin/Quanly.Api.pdb">
-      <publishTime>01/29/2019 14:55:58</publishTime>
+      <publishTime>01/29/2019 16:38:29</publishTime>
     </File>
     <File Include="bin/Quanly.Data.dll">
-      <publishTime>01/29/2019 14:55:55</publishTime>
+      <publishTime>01/29/2019 15:45:44</publishTime>
     </File>
     <File Include="bin/Quanly.Data.dll.config">
       <publishTime>01/28/2019 08:55:03</publishTime>
     </File>
     <File Include="bin/Quanly.Data.pdb">
-      <publishTime>01/29/2019 14:55:55</publishTime>
+      <publishTime>01/29/2019 15:45:44</publishTime>
     </File>
     <File Include="bin/Quanly.Service.dll">
-      <publishTime>01/29/2019 14:55:56</publishTime>
+      <publishTime>01/29/2019 15:45:45</publishTime>
     </File>
     <File Include="bin/Quanly.Service.dll.config">
       <publishTime>01/27/2019 15:56:54</publishTime>
     </File>
     <File Include="bin/Quanly.Service.pdb">
-      <publishTime>01/29/2019 14:55:56</publishTime>
+      <publishTime>01/29/2019 15:45:45</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>01/27/2019 15:56:54</publishTime>
@@ -553,7 +553,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/27/2019 15:56:54</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/29/2019 14:30:21</publishTime>
+      <publishTime>01/29/2019 16:38:29</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -43,7 +43,7 @@
                     <li ng-hide="authentication.isAuth"><a class="navbar-brand"  ui-sref="home">Home</a></li>
                     <li ng-hide="!authentication.isAuth"><a class="navbar-brand" ui-sref="home">Welcome {{authentication.userName}}</a></li>
                     <li ng-hide="!authentication.isAuth"><a class="navbar-brand" ui-sref="orders">My Orders</a></li>
-                    <!--<li><a class="navbar-brand" ng-click="LogOut()" >Logout</a></li>-->
+                    <li ng-hide="!authentication.isAuth"><a class="navbar-brand" ng-click="LogOut()" >Logout</a></li>
                     <!--<li><a class="navbar-brand" ui-sref="signup">Sign Up</a></li>-->
                 </ul>
 

@@ -32,7 +32,7 @@
     $scope.deleteData = function (id) {
         var url = "http://localhost:8080/quanly/customer/Remove/" + id;
         $http.delete(url).then(function (response) {
-            if (response.data) $scope.msg = "Delete Data Submitted Successfully!";
+            if (response.data) $scope.msg = "Delete Data Submitted Successfully!";  
             alert('Delete Data Submitted Successfully!');
             getData();
 
