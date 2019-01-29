@@ -1,5 +1,6 @@
 ﻿using Microsoft.Owin;
 using Microsoft.Owin.Security.OAuth;
+using Microsoft.Owin.Security;
 using Owin;
 using System;
 using System.Collections.Generic;
@@ -10,37 +11,13 @@ using Quanly;
 using Quanly.Api.Provider;
 using System.Configuration;
 using Microsoft.Owin.Security.DataHandler.Encoder;
+using Microsoft.Owin.Security.Jwt;
+using System.Web.Configuration;
+using System.Threading.Tasks;
 
 [assembly: OwinStartup(typeof(Quanly.Api.Startup))]
 namespace Quanly.Api
 {
-    //public class Startup
-    //{
-    //    public void Configuration(IAppBuilder app)
-    //    {
-    //        HttpConfiguration config = new HttpConfiguration();
-    //        WebApiConfig.Register(config);
-    //        app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
-    //        //app.UseWebApi(config);
-
-    //        ConfigureOAuth(app);
-    //    }
-    //    public void ConfigureOAuth(IAppBuilder app)
-    //    {
-    //        OAuthAuthorizationServerOptions OAuthServerOptions = new OAuthAuthorizationServerOptions()
-    //        {
-    //            AllowInsecureHttp = true,
-    //            TokenEndpointPath = new PathString("/token"),
-    //            AccessTokenExpireTimeSpan = TimeSpan.FromDays(1),
-    //            Provider = new SimpleAuthorizationServerProvider()
-    //        };
-
-    //        // Token Generation
-    //        app.UseOAuthAuthorizationServer(OAuthServerOptions);
-    //        app.UseOAuthBearerAuthentication(new OAuthBearerAuthenticationOptions());
-
-    //    }
-    //}
     public class Startup
     {
         public static OAuthBearerAuthenticationOptions OAuthBearerOptions { get; private set; }
@@ -53,9 +30,7 @@ namespace Quanly.Api
             WebApiConfig.Register(config);
             app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
             //app.UseWebApi(config);
-
-            ConfigureOAuth(app);
-
+            //ConfigureOAuthRS(app);
             ConfigureOAuth(app);
         }
         public void ConfigureOAuth(IAppBuilder app)
@@ -83,14 +58,14 @@ namespace Quanly.Api
         //AS dong thoi la RS thi cai dat them: Install-Package Microsoft.Owin.Security.Jwt
         //public void ConfigureOAuthRS(IAppBuilder app)
         //{
-        //    var issuer = URL_AS_API;//dia chi cua AS
+        //    var issuer = "localhost";//dia chi cua AS
         //    var secret = TextEncodings.Base64Url.Decode("1234567890123456789012345678901234567890123");//sceret key
 
         //    // Api controllers with an [Authorize] attribute will be validated with JWT
         //    app.UseJwtBearerAuthentication(
         //        new JwtBearerAuthenticationOptions
         //        {
-        //            AuthenticationMode = AuthenticationMode.Active,
+        //            AuthenticationMode = Microsoft.Owin.Security.AuthenticationMode.Active,
         //            AllowedAudiences = new[] { ClientId },
         //            IssuerSecurityTokenProviders = new IIssuerSecurityTokenProvider[]
         //            {
