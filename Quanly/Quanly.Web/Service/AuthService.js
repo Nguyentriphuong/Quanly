@@ -1,7 +1,7 @@
 ﻿'use strict';
 app.factory('authService', ['$http', '$q', 'localStorageService', function ($http, $q, localStorageService) {
 
-    var serviceBase = 'http://locallhost/8080/';
+    var serviceBase = 'http://ngauthenticationapi.azurewebsites.net/';
     var authServiceFactory = {};
 
     var _authentication = {
