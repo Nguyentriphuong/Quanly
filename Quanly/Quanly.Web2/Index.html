@@ -15,6 +15,22 @@
     <script src="Scripts/angular-ui-router.min.js"></script>
     <script src="Scripts/angular-local-storage.min.js"></script>
     <script src="Scripts/loading-bar.min.js"></script>
+    <style>
+
+        .navbar {
+            border-radius: 0;
+            padding-left: 1em;
+        }
+
+        ul.nav.navbar-nav {
+            display: -webkit-inline-box;
+            /* margin: 1em; */
+        }
+
+        li {
+            padding: 10px;
+        }
+    </style>
 </head>
 <body ng-app="AngularAuthApp">
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" ng-controller="indexController">
@@ -24,13 +40,13 @@
                     <span class="glyphicon glyphicon-chevron-down"></span>
                 </button>-->
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="navbar-brand" ng-show=""><a ui-sref="home">Home</a></li>
-                    <li class="navbar-brand"><a ui-sref="home">Welcome {{authentication.userName}}</a></li>
-                    <li class="navbar-brand"><a ui-sref="orders">My Orders</a></li>
-                    <li ng-click="LogOut()"> Logout</li>
-                    <li class="navbar-brand"><a ui-sref="signup">Sign Up</a></li>
+                    <li ng-hide="authentication.isAuth"><a class="navbar-brand"  ui-sref="home">Home</a></li>
+                    <li ng-hide="!authentication.isAuth"><a class="navbar-brand" ui-sref="home">Welcome {{authentication.userName}}</a></li>
+                    <li ng-hide="!authentication.isAuth"><a class="navbar-brand" ui-sref="orders">My Orders</a></li>
+                    <!--<li><a class="navbar-brand" ng-click="LogOut()" >Logout</a></li>-->
+                    <!--<li><a class="navbar-brand" ui-sref="signup">Sign Up</a></li>-->
                 </ul>
-                
+
             </div>
             <!--<div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -50,18 +66,7 @@
         <div class="ui-view"></div>
     </div>
     <hr />
-    <!--<div id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <p class="text-muted">Created by Taiseer Joudeh. Twitter: <a target="_blank" href="http://twitter.com/tjoudeh">@tjoudeh</a></p>
-                </div>
-                <div class="col-md-6">
-                    <p class="text-muted">Taiseer Joudeh Blog: <a target="_blank" href="http://bitoftech.net">bitoftech.net</a></p>
-                </div>
-            </div>
-        </div>
-    </div>-->
+  
     <!-- Load app main script -->
     <script src="app/app.js"></script>
     <!-- Load services -->

@@ -18,8 +18,8 @@ namespace Quanly.Api
 
             //// Web API configuration and services
             ///
-            //var cors = new EnableCorsAttribute("http://localhost:8080", "*", "*");
-            //config.EnableCors(cors);
+            var cors = new EnableCorsAttribute("http://localhost:8080", "*", "*");
+            config.EnableCors(cors);
             // Web API configuration and services  
             config.Formatters.Clear();
             config.Formatters.Add(new JsonMediaTypeFormatter());

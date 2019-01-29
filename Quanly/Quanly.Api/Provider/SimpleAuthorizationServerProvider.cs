@@ -20,25 +20,34 @@ namespace Quanly.Api.Provider
         }
         public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
         {
-            //context.Validated(new ClaimsIdentity(context.Options.AuthenticationType));
-            context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
-
-
-
-            var user = us.GetUser(context.UserName, context.Password);
-            if (user == null)
+            try
             {
 
-                context.SetError("invalid_grant", "The user name or password is incorrect.");
+                //context.Validated(new ClaimsIdentity(context.Options.AuthenticationType));
+                //context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
 
-                return;
+
+
+                var user = us.GetUser(context.UserName, context.Password);
+                if (user == null)
+                {
+
+                    context.SetError("invalid_grant", "The user name or password is incorrect.");
+
+                    return;
+                }
+                var identity = new ClaimsIdentity(context.Options.AuthenticationType);
+                identity.AddClaim(new Claim("sub", context.UserName));
+                identity.AddClaim(new Claim("role", "user"));
+
+                context.Validated(identity);
+
             }
-            var identity = new ClaimsIdentity(context.Options.AuthenticationType);
-            identity.AddClaim(new Claim("sub", context.UserName));
-            identity.AddClaim(new Claim("role", "user"));
+            catch (Exception ex)
+            {
 
-            context.Validated(identity);
-
+                throw;
+            }
         }
     }
 }
