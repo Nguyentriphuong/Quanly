@@ -42,7 +42,7 @@ namespace Quanly.Api
                 AllowInsecureHttp = true,
                 //TokenEndpointPath = new PathString("/oauth2/token"),
                 TokenEndpointPath = new PathString("/token"),
-                AccessTokenExpireTimeSpan = TimeSpan.FromHours(5),
+                AccessTokenExpireTimeSpan = TimeSpan.FromMinutes(5),
                 Provider = new SimpleAuthorizationServerProvider(),
                 //RefreshTokenProvider = new SimpleRefreshTokenProvider(),
                 //AccessTokenFormat = new CustomJwtFormat(URL_AS_API)
