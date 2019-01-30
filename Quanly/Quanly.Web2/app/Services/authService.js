@@ -16,14 +16,14 @@ app.factory('authService', ['$http', '$q', 'localStorageService', function ($htt
         var data = "grant_type=password&username=" + loginData.userName + "&password=" + loginData.password;
 
         var deferred = $q.defer();
-        
-        $http.post(serviceBase + 'token', data, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }).then(function (response) {
-            
+
+        var config = { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } };
+        $http.post(serviceBase + 'token', data, config ).then(function (response) {
+            debugger
             localStorageService.set('authorizationData', { token: response.data.access_token, userName: loginData.userName });
 
             _authentication.isAuth = true;
             _authentication.userName = loginData.userName;
-            _authentication.token = response.data.access_token;
             deferred.resolve(response);
 
         }, function (response) {
@@ -38,8 +38,7 @@ app.factory('authService', ['$http', '$q', 'localStorageService', function ($htt
 
     var _logOut = function () {
 
-        //localStorageService.remove('authorizationData');
-        _authentication.token = "";
+        localStorageService.remove('authorizationData');
         _authentication.isAuth = false;
         _authentication.userName = "";
 
@@ -51,7 +50,6 @@ app.factory('authService', ['$http', '$q', 'localStorageService', function ($htt
         if (authData) {
             _authentication.isAuth = true;
             _authentication.userName = authData.userName;
-            _authentication.token = authData.token;
         }
 
     }

@@ -11,7 +11,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         controller: "homeController"
     }
 
-    var orderState = {
+    var ordersState = {
         name: 'orders',
         url: '/orders',
         templateUrl: "/app/views/orders.html",
@@ -27,24 +27,8 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider.state(helloState);
     //$stateProvider.state(productState);
     //$stateProvider.state(customerState);
-    $stateProvider.state(orderState);
+    $stateProvider.state(ordersState);
     $stateProvider.state(loginState);
-
-    //$stateProvider.state("/login", {
-    //    controller: "loginController",
-    //    templateUrl: "/app/views/login.html"
-    //});
-
-    ////$stateProvider.state("/signup", {
-    ////    controller: "signupController",
-    ////    templateUrl: "/app/views/signup.html"
-    ////});
-
-    //$stateProvider.state("/orders", {
-    //    controller: "ordersController",
-    //    templateUrl: "/app/views/orders.html"
-    //});
-
     $urlRouterProvider.otherwise("/home");
 });
 //app.config(function ($httpProvider) {

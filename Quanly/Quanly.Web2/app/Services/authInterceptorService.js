@@ -1,7 +1,5 @@
-﻿// chuyển hướng đến yêu cầu đăng nhập
-
-'use strict';
-app.factory('authInterceptorService', ['$q', '$location', 'authService', function ($q, $location, authService) {
+﻿'use strict';
+app.factory('authInterceptorService', ['$q', '$location', 'localStorageService', function ($q, $location, localStorageService) {
 
     var authInterceptorServiceFactory = {};
 
@@ -9,9 +7,9 @@ app.factory('authInterceptorService', ['$q', '$location', 'authService', functio
 
         config.headers = config.headers || {};
 
-        var authData = authService.authentication;
+        var authData = localStorageService.get('authorizationData');
         if (authData) {
-            config.headers.Authorization = 'Bearer ' + authData.token;
+            config.headers.Authorization = 'Bearer ' + authData.token;     
         }
 
         return config;
