@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quanly.Web", "Quanly.Web\Qu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quanly.Web2", "Quanly.Web2\Quanly.Web2.csproj", "{C5DAC3EF-C3EC-4CD4-930B-3B5A1103A870}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quanly.Web3", "Quanly.Web3\Quanly.Web3.csproj", "{39A691B4-F1A3-43E9-A3BC-3705DD0340FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{C5DAC3EF-C3EC-4CD4-930B-3B5A1103A870}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5DAC3EF-C3EC-4CD4-930B-3B5A1103A870}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5DAC3EF-C3EC-4CD4-930B-3B5A1103A870}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39A691B4-F1A3-43E9-A3BC-3705DD0340FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39A691B4-F1A3-43E9-A3BC-3705DD0340FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39A691B4-F1A3-43E9-A3BC-3705DD0340FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39A691B4-F1A3-43E9-A3BC-3705DD0340FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
