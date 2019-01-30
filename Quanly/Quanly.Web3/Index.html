@@ -1,0 +1,73 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible" />
+    <title>AngularJS Authentication</title>
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/loading-bar.css" rel="stylesheet" />
+    <link href="Content/Site.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!-- 5 party libraries -->
+
+    <script src="Scripts/angular.min.js"></script>
+    <!--<script src="Scripts/angular-route.min.js"></script>-->
+    <script src="Scripts/angular-ui-router.min.js"></script>
+
+    <script src="Scripts/angular-local-storage.min.js"></script>
+    <script src="Scripts/loading-bar.min.js"></script>
+    <style>
+
+        .navbar {
+            border-radius: 0;
+            padding-left: 1em;
+        }
+
+        ul.nav.navbar-nav {
+            display: -webkit-inline-box;
+            /* margin: 1em; */
+        }
+
+        li {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body ng-app="AngularAuthApp">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <!--<button class="btn btn-success navbar-toggle" ng-click="navbarExpanded = !navbarExpanded">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                </button>-->
+                <ul class="nav navbar-nav navbar-right">
+                    <li ng-hide="authentication.isAuth"><a class="navbar-brand" ui-sref="home">Home</a></li>
+                    <li ng-hide="!authentication.isAuth"><a class="navbar-brand" ui-sref="home">Welcome {{authentication.userName}}</a></li>
+                    <li ng-hide="!authentication.isAuth"><a class="navbar-brand" ui-sref="orders">My Orders</a></li>
+                    <li ng-hide="!authentication.isAuth"><a class="navbar-brand" ng-click="Logout">Log Out</a></li>
+                    <!--<li><a class="navbar-brand" ui-sref="signup">Sign Up</a></li>-->
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="ui-view"></div>
+    </div>
+    <hr />
+
+    <!-- Load app main script -->
+    <script src="app/app.js"></script>
+    <!-- Load services -->
+
+    <script src="app/Services/authService.js"></script>
+    <!-- Load controllers -->
+    <script src="app/Controllers/homeController.js"></script>
+    <script src="app/Controllers/indexController.js"></script>
+    <script src="app/Controllers/loginController.js"></script>
+    <script src="app/Controllers/signupController.js"></script>
+    <script src="app/Controllers/ordersController.js"></script>
+    <!--<script src="app/controllers/ordersController.js"></script>-->
+</body>
+</html>
