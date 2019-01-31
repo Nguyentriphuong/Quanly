@@ -31,9 +31,9 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider.state(loginState);
     $urlRouterProvider.otherwise("/home");
 });
-//app.config(function ($httpProvider) {
-//    $httpProvider.interceptors.push('authInterceptorService');
-//});
+app.config(function ($httpProvider) {
+    $httpProvider.interceptors.push('authInterceptorService');
+});
 
 app.run(['authService', function (authService) {
     authService.fillAuthData();
