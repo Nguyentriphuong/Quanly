@@ -2,8 +2,6 @@
 
 app.config(function ($stateProvider, $urlRouterProvider) {
 
-
-
     var helloState = {
         name: 'home',
         url: '/home',
@@ -25,8 +23,6 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     }
     $urlRouterProvider.otherwise("/home");
     $stateProvider.state(helloState);
-    //$stateProvider.state(productState);
-    //$stateProvider.state(customerState);
     $stateProvider.state(ordersState);
     $stateProvider.state(loginState);
     $urlRouterProvider.otherwise("/home");
